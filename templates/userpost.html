@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài viết</title>
+
+</head>
+<body>
+    <form method = POST>
+	<fieldset>
+    <legend>{{tittle}}</legend>
+        <pre>{{content}}</pre>
+	</fieldset>
+
+        <fieldset>
+    <legend>Comment</legend>
+            <pre>{{comment}}</pre>
+    <textarea name="comment" id="comment" rows="2" cols="20"></textarea>
+        </fieldset>
+        <input type="submit" name = "submit" id = "idComment" value = "Comment">
+        <input type="submit" name = "submit" id = "idDelete" value = "Delete post">
+        <input type="submit" name = "submit" id = "idPut" value = "Change post">
+    </form>
+</body>
+</html>

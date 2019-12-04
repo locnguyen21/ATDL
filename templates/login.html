@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log In</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static',filename ='signup.css') }}">
+</head>
+<body>
+    <form id="msform"  method = POST>
+    <fieldset>
+    <h2 class="fs-title">LOG IN</h2>
+    <input type="text" name="username" placeholder="Username" value = {{username}}>
+    <input type="password" name="password" placeholder="Password" value = {{password}}>
+    <input type="submit" name = "submit" class="action-button" id = "idSubmit" value = "Login">
+
+        {% if status == 1%}
+        <th><p>Het so lan dang nhap cho user: {{username}}</p></th>
+        <script>
+            document.getElementById("idSubmit").disabled = true;
+        </script>
+        {% endif %}
+
+        {% if status == 2%}
+        <th><p>So lan sai: {{so_sai}} </p></th>
+        {% endif %}
+
+        {% if status == 3%}
+        <th><p>Khong ton tai user: {{username}} </p></th>
+        {% endif %}
+
+    </fieldset>
+    </form>
+</body>
+</html>

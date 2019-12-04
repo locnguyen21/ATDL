@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static',filename ='signup.css') }}">
+</head>
+<body>
+    <form id="msform" method = POST>
+    <fieldset>
+    <h2 class="fs-title">OTP</h2>
+    <input type="text" name="otp" placeholder="otp" value = {{otp}}>
+    <input type="submit" name = "submit" class="action-button" id = "idgetSubmit" value = "Get OTP">
+    <input type="submit" name = "submit" class="action-button" id = "idSubmit" value = "Submit OTP">
+
+        {% if check == 1%}
+        <th><p>Renew OTP</p></th>
+        {% endif %}
+
+        {% if check == 2%}
+        <th><p>OTP Cu con han trong {{timeleft}}</p></th>
+        {% endif %}
+
+        {% if check == 3%}
+        <th><p>New OTP</p></th>
+        {% endif %}
+
+        {% if check == 4%}
+        <th><p>OTP da qua han</p></th>
+        {% endif %}
+    </fieldset>
+    </form>
+</body>
+</html>

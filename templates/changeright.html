@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉnh sửa quyền</title>
+
+</head>
+<body>
+    <form method = POST>
+
+	<fieldset>
+    <legend>Chỉnh sửa quyền</legend>
+        <select name = "user_select">
+            {% for user in user_list %}
+                <option value="{{ user }}">{{ user }}</option>
+            {% endfor %}
+        </select>
+
+        <select name = "right_select">
+            {% for role in role_list %}
+                <option value="{{ role }}">{{ role }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" name = "submit" id = "idChange" value = "Change">
+    </fieldset>
+        {% if check == 1 %}
+        <p>Đã set quyền {{role}} dành cho user: {{username}} </p>
+        {% endif %}
+    </form>
+</body>
+</html>

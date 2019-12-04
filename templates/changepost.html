@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm bài viết mới</title>
+
+</head>
+<body>
+    <form method = POST action = "/changepost">
+	<fieldset>
+    <legend>Thêm bài viết mới</legend>
+        Tiêu đề bài viết: <input type = "text" name = "tittle" value = {{tittle}} ><br>
+        Link bài viết: <input type = "text" name = "linkpost" value = {{linkpost}} ><br>
+        Nội dung: <br>
+    <textarea name="content" id="content" rows="10" cols="100">{{content}}</textarea>
+	</fieldset>
+        <input type="submit" name="Submit" class="action-button" id = "change" value = "Change">
+    </form>
+</body>
+</html>

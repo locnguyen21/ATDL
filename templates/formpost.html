@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm bài viết mới</title>
+
+</head>
+<body>
+    <form method = POST>
+	<fieldset>
+    <legend>Thêm bài viết mới</legend>
+        Tiêu đề bài viết: <input type = "text" name = "tittle" value = {{tittle}}><br>
+        Link bài viết: <input type = "text" name = "linkpost" value = {{linkpost}}><br>
+        Nội dung: <br>
+    <textarea name="content" id="content" rows="10" cols="100"></textarea>
+	</fieldset>
+        <input type="submit" name="Submit" class="action-button" id = "submit" value = "SUBMIT">
+
+        {% if check == 1%}
+        <p>Link bài viết đã tồn tại</p>
+        {% endif %}
+
+        {% if check == 2%}
+        <p>User không được phép đăng bài, chỉ có admin và mod</p>
+        {% endif %}
+    </form>
+</body>
+</html>

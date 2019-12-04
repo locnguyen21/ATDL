@@ -1,0 +1,50 @@
+<html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'bcPaint.js') }}" ></script>
+
+<style>
+#bcPaint-container{
+  width: 350px;
+  height: 350px;
+}
+#bcPaint-canvas-container{
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+}
+#bcPaint-canvas-container > canvas{
+  border: 1px solid #696969;
+
+}
+#bcPaint-bottom{
+  width: 100%;
+  height: 25px;
+
+}
+
+}
+</style>
+</head>
+<div id="bcPaint"></div>
+
+<script type="text/javascript">
+			$('#bcPaint').bcPaint();
+</script>
+<input  type="submit" name="Submit" id = "submit" value = "SUBMIT">
+<button onclick="copy()">Get data</button>
+    <script>
+
+        var paintCanvas = document.getElementById('bcPaintCanvas');
+        var ctx = paintCanvas.getContext('2d');
+        function copy() {
+        var img = paintCanvas.toDataURL();
+        console.log(img)
+        }
+    </script>
+
+</body>
+</html>

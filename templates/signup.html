@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for ('static',filename ='signup.css') }}">
+</head>
+<body>
+    <form id="msform" method = POST>
+    <fieldset>
+    <h2 class="fs-title">SIGN UP</h2>
+    <input type="text" name="username" placeholder="Username" value = {{username}}>
+    <input type="password" name="password" placeholder="Password" value = {{password}}>
+    <input type="password" name="cpassword" placeholder="Confirm Password" value = {{cpassword}}>
+    <input type="submit" name="Sign up" class="action-button" id = "checkpass" value = "Check password">
+    <input type="submit" name="Sign up" class="action-button" id = "signup" value = "Sign up">
+    <input type="submit" name="Sign up" class="action-button" id = "login" value = "Go to log in">
+    <input type="submit" name="Sign up" class="action-button" id = "salting" value = "Salting">
+
+        {% if check == 1 %}
+        <th><p>Length: {{do_dai}}</p></th>
+        <th><p>Khong gian ki tu mat khau: {{khong_gian_do_dai}}</p></th>
+        <th><p>Do manh password: {{classpass}}</p></th>
+        {% endif %}
+
+        {% if check == 2 %}
+        <th><p>Tao thanh cong user : {{username}}</p></th>
+        {% endif %}
+
+        {% if check == 3 %}
+        <th><p>Da ton tai user : {{username}}</p></th>
+        {% endif %}
+
+        {% if check == 4 %}
+        <th><p>Mat khau khong khop</p></th>
+        {% endif %}
+
+        {% if check == 5 %}
+        <th><p>Mat khau cu: {{oldpassword}}</p></th>
+        <th><p>Mat khau moi: {{password}}</p></th>
+        <th><p>Salting: {{salt}}</p></th>
+        {% endif %}
+    </fieldset>
+    </form>
+</body>
+</html>

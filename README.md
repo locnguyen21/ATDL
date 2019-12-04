@@ -1,5 +1,5 @@
 # ATDL
-Using Flask to building web service 
+Using Flask to build web service 
 <br> Một số chức năng 
 <pre>  Xử lý đăng nhập
   Xử lý đăng ký
